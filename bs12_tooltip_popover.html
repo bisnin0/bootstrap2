@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device, initial-scale=1"/> 
+<link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="bootstrap.js"></script>
+<style>
+	.container{padding:200px;}
+</style>
+<script>
+	$(function(){
+		$("[data-toggle=tooltip]").tooltip();
+		$("[data-toggle=popover]").popover();
+	});
+</script>
+</head>
+<body>
+<!--  tooltip, popover를 사용하기 위해서는 popper.js가 있어야 한다. -->
+<div class="container">
+<!-- 
+		data-toggle="tooltip"   : 현재태그 풍선도움 기능을 가진다.
+		
+		title속성 : 풍선도움말 내용
+		data-placement : 풍선도움말 표시 위치(top, right, bottom, left)
+ -->
+	<h1 data-toggle="tooltip" title="풍선도움말~~~~~" data-placement="top">Tooltip 테스트</h1>
+	<div data-toggle="tooltip" title="Popovers must be initialized with jQuery" data-placement="left">
+		Note: Popovers must be initialized with jQuery: select the specified element and call the popover() method.
+		The following code will enable all popovers in the document:
+	</div>
+	<h1>popover를 이용한 풍선도움말</h1>
+	<!-- 
+		풍선도움말에 제목과 내용이 있는 것을 말한다.
+		
+		title속성 : 풍선도움말의 제목
+		data-content속성 : 풍선도움말의 내용
+	 -->
+	<div class="list-group">
+		<a href="#" class="list-group-item" title="랜선타고" data-content="랜선타고 우포늪 여행가요" data-toggle="popover" data-placement="top" data-trigger="hover">랜선타고 우포늪 여행가요</a>
+		<a href="#" class="list-group-item" title="통영" data-content="통영에 있는 이색조형물 모듬" data-toggle="popover" data-placement="right" data-trigger="hover">통영에 있는 이색조형물 모듬</a>
+		<a href="#" class="list-group-item" title="붉은색 단풍" data-content="붉은색 단풍 구경하러 담양가자" data-toggle="popover" data-placement="bottom" data-trigger="hover">붉은색 단풍 구경하러 담양가자.</a>
+		<a href="#" class="list-group-item" title="가족외식" data-content="가족 외식하기 좋은 진안의 핫플" data-toggle="popover" data-placement="left" data-trigger="hover">가족 외식하기 좋은 진안의 핫플...</a>
+		<a href="#" class="list-group-item" title="장성" data-content="장성에서 만날 수 있는 숲내음 가득한 길" data-toggle="popover"  data-trigger="hover">
+			<h2>장성에서 만날 수 있는 숲내음 가득한 길</h2>
+			<p>장성에서 만날 수 있는 숲내음 가득한 길 장성에서 만날 수 있는 숲내음 가득한 길 장성에서 만날 수 있는 숲내음 가득한 길 장성에서 만날 수 있는 숲내음 가득한 길</p>
+		</a>
+	</div>
+</div>
+</body>
+</html>

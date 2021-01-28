@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device, initial-scale=1"/> 
+<link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+	<h1>Collapse예</h1>
+	<!-- 버튼을 클릭하면 이미지가 접혔다 펼쳐지는 기능 
+		.collapse : 접혔다, 펼쳐지는 기능이 있고 처음에 접힌상태임.
+		.show : 처음 실행시 보임.
+		
+		data-target="#id"	-> 클릭시 보여지거나 숨겨질 대상
+	-->
+	
+	<button class="btn btn-info" data-target="#view1" data-toggle="collapse">클릭하세요</button><br/>
+	<div id="view1" class="collapse show">
+		<img src="../img/snow.gif"/>
+	</div>
+	
+	<hr/>
+	<button class="btn btn-secondary" data-target="#view2" data-toggle="collapse">문장을 보여줌</button>
+	<div id="view2" class="collapse">
+		컨벤션센터는 각종 회의, 대회, 전시회 등을 열기 위한 제반시설이다. 경남 로봇랜드에도 컨벤센센터가 들어섰다. 그러나 지난달 30일 <한경닷컴> 취재진이 찾은 로봇랜드 컨벤션센터는 흔히 생각하는 마이스(MICE: Meeting·Incentives·Convention·Exhibition) 시설과는 거리가 멀었다.
+		민간자본 토대로 부대시설이 추가로 들어올 예정이라고는 하지만 홀로 황무지를 지키고 있었다. 로봇랜드 컨벤션센터는 마이스 토대 관광산업의 입지 조건과는 동떨어진 모습이었다.
+	</div>
+	
+	<hr/>
+	<h1>Accordion예</h1>
+	<div id="accordion">
+		<div class="card">
+			<div class="card-header" data-target="#acco1" data-toggle="collapse" data-parent="#accordion">아코디언 적용예 1</div>
+			<div class="collapse" id="acco1">이강인은 이번 여름 이적 시장에서 페란 토레스가 떠난 후 그의 등번호 20번을 부여 받아서 활약하고 있다. 남은 시즌에도 20번을 그대로 달고 뛸 예정이다. 이외에도 막시 고메스(22번), 카를로스 솔레르(8번) 등 대부분 선수들이 기존 등번호를 유지한다.주장이었지만 팀을 떠나게 된 다니 파레호의 등번호 10번은 공석으로 유지한다. 솔레르가 10번을 요청한 것으로 알려졌지만 발렌시아가 이를 거절했다. 스페인 '아스'는 "발렌시아는 등번호 10번을 더 상업적 효과가 큰 선수가 달길 원한다"고 이유를 밝혔다.
+			</div>
+		</div>	
+		<div class="card">1</div>
+		<div class="card">1</div>	
+	</div>
+</div>
+</body>
+</html>

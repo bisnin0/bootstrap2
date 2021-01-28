@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device, initial-scale=1"/> 
+<link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+<script>
+	$(function(){
+		//검색어를 입력하면 호출하는 이벤트
+		$("#searchWord").keyup(function(){
+			var word = $("#searchWord").val().toLowerCase(); //   toLowerCase(),  toUpperCase()
+			//
+			$("#memList>tr").filter(function(){
+				//var trTxt = $(this).text().toLowerCase();
+				//var idx = trTxt.indexOf(word);  //  trTxt.search(word);
+				
+				var trTxt = $(this).text().toLowerCase().indexOf(word);  // -1 , 0, 1,2,3,........
+				// true:보임 , flase:안보임
+				$(this).toggle(trTxt>-1);
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<div class="container">
+	<h1>Filter Test....</h1>
+	<input type="text" id="searchWord" placeholder="Search......" class="form-control"/>
+	<hr/>
+	<table class="table">
+		<thead>
+		<tr>
+			<td>FirstName</td>
+			<td>LastName</td>
+			<td>Phone</td>
+			<td>Email</td>
+		</tr>
+		</thead>
+		<tbody id="memList">
+			<tr>
+				<td>mary</td>
+				<td>doolery</td>
+				<td>010-1234-5678</td>
+				<td>mary1234@nate.com</td>
+			</tr>
+			<tr>
+				<td>jone</td>
+				<td>moe</td>
+				<td>010-5678-5678</td>
+				<td>jone1234@naver.com</td>
+			</tr>
+			<tr>
+				<td>scott</td>
+				<td>tiger</td>
+				<td>010-7777-8888</td>
+				<td>scott1111@nate.com</td>
+			</tr>
+			<tr>
+				<td>ford</td>
+				<td>model</td>
+				<td>010-4545-9999</td>
+				<td>fordmodel@hanmail.net</td>
+			</tr>
+			<tr>
+				<td>july</td>
+				<td>diamond</td>
+				<td>010-6666-5656</td>
+				<td>diamond@nate.com</td>
+			</tr>
+			<tr>
+				<td>ansony</td>
+				<td>john</td>
+				<td>010-4343-2436</td>
+				<td>ansony5555@naver.com</td>
+			</tr>
+			<tr>
+				<td>smith</td>
+				<td>tiger</td>
+				<td>010-1212-5678</td>
+				<td>smith@nate.com</td>
+			</tr>
+			<tr>
+				<td>king</td>
+				<td>wang</td>
+				<td>010-1234-7777</td>
+				<td>kingtrtr@nate.com</td>
+			</tr>		
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
